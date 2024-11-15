@@ -1,137 +1,55 @@
 "use client";
 
-import {
-  Call,
-  Facebook,
-  Instagram,
-  LinkedIn,
-  MailOutline,
-  Twitter,
-} from "@mui/icons-material";
+import { Call, ChevronRight, MailOutline } from "@mui/icons-material";
 import { Divider } from "@mui/material";
 import Link from "next/link";
 
 const footerArr = [
   {
     _id: "1",
-    heading: "FEATURES",
+    heading: "OTHER LINKS",
     list: [
       {
-        title: "Lead Management",
+        title: "Term & Conditions",
         path: "/",
       },
       {
-        title: "Contact Management",
-        path: "/#about",
-      },
-
-      {
-        title: "Deal Management",
-        path: "/#problems",
+        title: "Privacy Policy",
+        path: "/",
       },
       {
-        title: "Account Management",
-        path: "/#benefits",
-      },
-      {
-        title: "Sales Automation",
-        path: "/#benefits",
-      },
-      {
-        title: "Sales Analytics",
-        path: "/#benefits",
+        title: "Cancellation & Refund Policy",
+        path: "/",
       },
     ],
   },
   {
     _id: "2",
-    heading: "SOLUTIONS",
+    heading: "OUR SERVICES",
     list: [
       {
-        title: "Sales CRM",
-        path: "/#my-account",
+        title: "Stock Cash",
+        path: "/",
       },
       {
-        title: "CRM Software",
-        path: "/my-account/my-order",
+        title: "Stock Futures",
+        path: "/",
       },
       {
-        title: "Workflow Automation",
-        path: "/wishlist",
+        title: "Stock Options",
+        path: "/",
       },
       {
-        title: "Retail CRM",
-        path: "/wishlist",
+        title: "Index Options",
+        path: "/",
       },
       {
-        title: "Real Estate CRM",
-        path: "/wishlist",
+        title: "BTST/STBT Pack",
+        path: "/",
       },
       {
-        title: "CRM System",
-        path: "/wishlist",
-      },
-    ],
-  },
-
-  {
-    _id: "3",
-    heading: "RESOURCES",
-    list: [
-      {
-        title: "Essentials",
-        path: "/#contact",
-      },
-      {
-        title: "Compare Us",
-        path: "/privacy-policy",
-      },
-      {
-        title: "Salesforce Alternative",
-        path: "/terms",
-      },
-      {
-        title: "Pipedrive Alternative",
-        path: "/shipping-policy",
-      },
-      {
-        title: "Hubspot Alternative",
-        path: "/refund-policy",
-      },
-      {
-        title: "Freshsales Alternative",
-        path: "/refund-policy",
-      },
-    ],
-  },
-
-  {
-    _id: "4",
-    heading: "Attract Web Visitors",
-    list: [
-      {
-        title: "Email Marketing",
-        path: "/#contact",
-      },
-      {
-        title: "Email Templates",
-        path: "/privacy-policy",
-      },
-      {
-        title: "Email Broadcast",
-        path: "/terms",
-      },
-      {
-        title: "Double Opt-In Email",
-        path: "/shipping-policy",
-      },
-      {
-        title: "Autoresponder Email",
-        path: "/shipping-policy",
-      },
-      {
-        title: "Email A/B Testing",
-        path: "/shipping-policy",
+        title: "Delivery Pack",
+        path: "/",
       },
     ],
   },
@@ -139,24 +57,34 @@ const footerArr = [
 
 const Footer = () => {
   return (
-    <section className="bg-gradient-to-r from-yellow-50 to-red-50 shadow">
+    <section className=" shadow">
       <section className="main-container py-10  md:px-10">
-        <div className="flex md:flex-row flex-col md:justify-between justify-center md:gap-0  gap-5 items-center  ">
-          <Link href="/">
-            <div className="flex md:justify-start justify-center items-center">
-              <img
-                src="logo.png"
-                alt="logo"
-                className="w-[55%] md:w-[28%] lg:w-[20%] cursor-pointer"
-              />
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-8">
+          <div className="flex flex-col gap-5 md:justify-start justify-center items-start">
+            <Link href="/">
+              <img src="logo.png" alt="logo" className="w-32 cursor-pointer" />
+            </Link>
+            <div className="flex flex-col gap-4">
+              <Link
+                href="mailto:stoxxon5@gmail.com"
+                className="flex items-center gap-1"
+              >
+                <MailOutline className="!text-secondary !text-xl" />
+                Email :<p> stoxxon5@gmail.com</p>
+              </Link>
+              <Link
+                href="tel:+919632445616"
+                className="flex items-center gap-1"
+              >
+                <Call className="!text-secondary !text-xl" />
+                Phone :<p>+91 9632445616</p>
+              </Link>
             </div>
-          </Link>
-        </div>
-        <div className="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-1 mt-10  gap-8">
+          </div>
           {footerArr.map((curElm, index) => (
-            <div className=" w-52" key={index}>
-              <div>
-                <h1 className="mb-2 font-semibold uppercase">
+            <div className=" w-52 md:w-full" key={index}>
+              <div className="">
+                <h1 className="mb-2 font-semibold uppercase ">
                   {curElm.heading}
                 </h1>
                 <ul className="flex flex-col ">
@@ -165,66 +93,27 @@ const Footer = () => {
                       className="mt-4 flex w-fit cursor-pointer list-none items-center  common-transition hover:text-secondary"
                       key={index}
                     >
-                      <p className=" tracking-wide text-sm font-medium ">
-                        {curElm.title}
-                      </p>
+                      <div className="flex items-center">
+                        <ChevronRight />
+
+                        <p className=" tracking-wide text-sm font-medium ">
+                          {curElm.title}
+                        </p>
+                      </div>
                     </li>
                   ))}
                 </ul>
               </div>
             </div>
           ))}
-          <div className="flex flex-col gap-4">
-            <p className="mb-2 font-semibold uppercase">Contact Info.</p>
-            <span className="flex items-center gap-1">
-              <MailOutline className="!text-secondary !text-xl" />
-              Email :<p> sales@yardcrm.com</p>
-            </span>
-            <span className="flex items-center gap-1">
-              <Call className="!text-secondary !text-xl" />
-              Phone :<p>+91 8114957912</p>
-            </span>
-            <div className="flex gap-3 items-center pt-4">
-              <Link href="https://www.facebook.com/searchingyard/" target=" ">
-                <h5 className="!text-white !bg-facebook !p-1 rounded-lg">
-                  <Facebook />
-                </h5>
-              </Link>
-              <Link href="https://www.instagram.com/SearchingYard/" target=" ">
-                <h5 className="!text-white !bg-instagram !p-1 rounded-lg">
-                  <Instagram />
-                </h5>
-              </Link>
-              <Link href="https://twitter.com/YardSearching" target=" ">
-                <h5 className="!text-white !bg-twitter !p-1 rounded-lg">
-                  <Twitter />
-                </h5>
-              </Link>
-              <Link
-                href="https://www.linkedin.com/company/searchingyardindia/"
-                target=" "
-              >
-                <h5 className="!text-white !bg-linkedin !p-1 rounded-lg">
-                  <LinkedIn />
-                </h5>
-              </Link>
-            </div>
-          </div>
         </div>
       </section>
       <Divider />
       <section className="bg-primary">
         <div className="main-container flex  py-4 justify-center items-center text-white tracking-wide">
           <p>
-            Copyright &copy; {new Date().getFullYear()} The YARDCRM A Product Of{" "}
-            <Link
-              href="https://searchingyard.com/"
-              target=" "
-              className="hover:cursor-pointer hover:!text-orange-400"
-            >
-              SearchingYard Software Group.
-            </Link>{" "}
-            All rights reserved.
+            Copyright &copy; {new Date().getFullYear()} Stoxxon Research
+            Services . All rights reserved.
           </p>
         </div>
       </section>
