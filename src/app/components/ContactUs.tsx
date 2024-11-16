@@ -24,7 +24,7 @@ const ContactUs = () => {
         </div>
 
         <div className="w-full hidden md:block ">
-          <img src="./support.gif" alt="contact_gif" className=" w-[90%]" />
+          <img src="./Animation.gif" alt="contact_gif" className=" w-[90%]" />
         </div>
       </div>
     </section>

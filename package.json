@@ -14,10 +14,12 @@
     "@mui/icons-material": "^6.1.7",
     "@mui/lab": "^6.0.0-beta.15",
     "@mui/material": "^6.1.7",
+    "core-js": "^3.39.0",
     "formik": "^2.4.6",
     "next": "15.0.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-lottie": "^1.2.7",
     "sweetalert2": "^11.14.5",
     "yup": "^1.4.0"
   },
