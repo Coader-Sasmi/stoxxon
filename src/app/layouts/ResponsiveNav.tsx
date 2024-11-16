@@ -25,19 +25,19 @@ export default function ResponsiveNav() {
 
       <Collapse in={open} timeout="auto" unmountOnExit>
         <section className="flex flex-col gap-2  absolute bg-white w-full p-5 left-0 ">
-          <Link href="/#about">
+          <Link href="/">
             <h6 className="hover:text-secondary common-transition text-sm">
               About
             </h6>
           </Link>
-          <Link href="/#features">
+          <Link href="/">
             <h6 className="common-transition text-sm hover:text-secondary">
-              Features
+              Services
             </h6>
           </Link>
-          <Link href="/#solution">
+          <Link href="/">
             <h6 className="hover:text-secondary common-transition text-sm">
-              Solution
+              Payment Options
             </h6>
           </Link>
           {/* <Link href="/#counter">
@@ -50,25 +50,25 @@ export default function ResponsiveNav() {
               Pricing
             </h6>
           </Link> */}
-          <Link href="/#testimonial">
+          {/* <Link href="/#testimonial">
             <h6 className="hover:text-secondary common-transition text-sm">
               Testimonial
             </h6>
-          </Link>
-          <Link href="/#contact">
+          </Link> */}
+          {/* <Link href="/#contact">
             <h6 className="hover:text-secondary common-transition text-sm">
               Contact Us
             </h6>
-          </Link>
-          <Link href="/#contact" target=" ">
+          </Link> */}
+          {/* <Link href="/#contact" target=" ">
             <h6 className="hover:text-secondary common-transition text-sm">
               Mobile App
             </h6>
-          </Link>
+          </Link> */}
           <div className="flex flex-col gap-4 mb-4 ">
-            <Link href="/login">
+            <Link href="/">
               <button className="w-24 text-secondary font-semibold rounded-md common-transition text-start hover:text-center hover:bg-primary/10 hover:px-5 hover:py-1">
-                Login
+                Contact Us
               </button>
             </Link>
             {/* <Link href="/register">
