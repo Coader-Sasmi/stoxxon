@@ -2,11 +2,12 @@ import PublicLayout from "../layouts";
 
 export default function Page() {
   return (
-    <PublicLayout>
+    <PublicLayout title="Cancellation & Refund Policy || Stoxxon Research Services">
       <div className="main-container py-10 flex flex-col gap-3 bg-purple-900/5">
         <p className="text-gray-500 text-sm tracking-wider font-thin">
-          All sales are final and there will be ABSOLUTELY NO REFUNDS and
-          CANCELLATIONS.
+          All sales are final and there will be{" "}
+          <span className="text-black">ABSOLUTELY NO REFUNDS</span> and{" "}
+          <span className="text-black">CANCELLATIONS.</span>
         </p>
         <p className="text-gray-500 text-sm tracking-wider font-thin">
           Before deciding to subscribe to our services, all customers are
@@ -16,7 +17,7 @@ export default function Page() {
           not offer refunds on subscriptions that have already been taken.
         </p>
         <p className="text-gray-500 text-sm tracking-wider font-thin">
-          It is the client’s Sole responsibility to Read and understand all
+          It is the {`client’s`} Sole responsibility to Read and understand all
           information associated with the products/services and Customer support
           offered by Stoxxon Research and its Assignees.
         </p>
@@ -50,14 +51,15 @@ export default function Page() {
           system (sms) based information and research dissemination services.
           Subscribers are advised to understand that the services can fail due
           to failure of hardware, software, and Internet connection. While we
-          ensure that the messages are delivered in time to the subscribers’
-          Mobile Networks, the delivery of these messages to the customer’s
-          mobile phone/handset is the responsibility of the customer’s Mobile
-          Network. SMS may be delayed or not delivered to the customer’s mobile
-          phone/handset on certain days, owing to technical reasons that can
-          only be addressed by the customer’s Mobile Network, and Stoxxon
-          Research and its employees cannot be held responsible for the same in
-          any case.
+          ensure that the messages are delivered in time to the {`subscriber’s`}
+          Mobile Networks, the delivery of these messages to the {`customer’s`}
+          mobile phone/handset is the responsibility of the {`customer’s`}{" "}
+          Mobile Network. SMS may be delayed or not delivered to the{" "}
+          {`customer’s`}
+          mobile phone/handset on certain days, owing to technical reasons that
+          can only be addressed by the {`customer’s`} Mobile Network, and
+          Stoxxon Research and its employees cannot be held responsible for the
+          same in any case.
         </p>
         <p className="text-gray-500 text-sm tracking-wider font-thin">
           Stoxxon Research is in the process of SEBI registration. Stoxxon

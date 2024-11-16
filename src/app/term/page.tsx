@@ -2,7 +2,7 @@ import PublicLayout from "../layouts";
 
 export default function Page() {
   return (
-    <PublicLayout>
+    <PublicLayout title="Cancellation & Refund Policy || Stoxxon Research Services">
       <div className="main-container py-10 flex flex-col gap-3 bg-purple-900/5">
         <h1>Who We Are</h1>
         <p className="text-gray-500 text-sm tracking-wider font-thin">
@@ -18,7 +18,7 @@ export default function Page() {
           materials contained in this web site are protected by applicable
           copyright and trade mark law. By registering on
           https://stoxxon.vercel.app/ you explicitly agree to be contacted by
-          our personnel/send you SMS’s related to our services even if the
+          our personnel/send you {`SMS’s`} related to our services even if the
           contact number you have entered is on DND (Do not Disturb).
         </p>
         <h1>USE LICENSE</h1>
@@ -94,7 +94,7 @@ export default function Page() {
           its Internet web site and is not responsible for the contents of any
           such linked site. The inclusion of any link does not imply endorsement
           by stoxxon – Research Analyst of the site. Use of any such linked web
-          site is at the user’s own risk.{" "}
+          site is at the {`user’s`} own risk.
         </p>
         <h1>SITE TERMS OF USE MODIFICATIONS </h1>
         <p className="text-gray-500 text-sm tracking-wider font-thin">

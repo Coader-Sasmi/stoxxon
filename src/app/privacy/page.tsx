@@ -2,7 +2,7 @@ import PublicLayout from "../layouts";
 
 export default function Page() {
   return (
-    <PublicLayout>
+    <PublicLayout title="Privacy Policy || Stoxxon Research Services">
       <div className="main-container py-10 flex flex-col gap-3 bg-purple-900/5">
         <h1 className="">GENERAL PRIVACY</h1>
         <p className="text-gray-500 text-sm tracking-wider font-thin">
@@ -29,8 +29,8 @@ export default function Page() {
           Stoxxon Research Services discloses potentially personally-identifying
           and personally-identifying information only to those of its employees,
           contractors and affiliated organizations that (i) need to know that
-          information in order to process it on Stoxxon Research Services’
-          behalf or to provide services available at Stoxxon Research Services’
+          information in order to process it on Stoxxon Research Services behalf
+          or to provide services available at Stoxxon Research Services
           websites, and (ii) that have agreed not to disclose it to others.
           Stoxxon Research Services will not rent or sell potentially
           personally-identifying and personally-identifying information to
@@ -40,15 +40,15 @@ export default function Page() {
           If you are a registered user of Stoxxon Research Services website and
           have supplied your email address, Stoxxon Research Services may
           occasionally send you an email to tell you about new features, solicit
-          your feedback, or just keep you up to date with what’s going on with
-          Stoxxon Research Services and our products. Stoxxon Research Services
-          takes all measures reasonably necessary to protect against the
-          unauthorized access, use, alteration or destruction of potentially
+          your feedback, or just keep you up to date with {`what’s`} going on
+          with Stoxxon Research Services and our products. Stoxxon Research
+          Services takes all measures reasonably necessary to protect against
+          the unauthorized access, use, alteration or destruction of potentially
           personally-identifying and personally-identifying information.
         </p>
         <h1>COOKIES</h1>
         <p className="text-gray-500 text-sm tracking-wider font-thin">
-          A cookie is a string of information that a website stores on a
+          {`A cookie is a string of information that a website stores on a
           visitor’s computer, and that the visitor’s browser provides to the
           website each time the visitor returns. Stoxxon Research Services uses
           cookies to help Stoxxon Research Services identify and track visitors,
@@ -57,13 +57,13 @@ export default function Page() {
           to have cookies placed on their computers should set their browsers to
           refuse cookies before using Stoxxon Research Services’ websites, with
           the drawback that certain features of Stoxxon Research Services’
-          websites may not function properly without the aid of cookies.
+          websites may not function properly without the aid of cookies.`}
         </p>
         <h1>PRIVACY POLICY CHANGES</h1>
         <p className="text-gray-500 text-sm tracking-wider font-thin">
           Although most changes are likely to be minor, Stoxxon Research
           Services may change its Privacy Policy from time to time, and in
-          Stoxxon Research Services’ – Research Analyst sole discretion. Stoxxon
+          Stoxxon Research Services – Research Analyst sole discretion. Stoxxon
           Research Services encourages visitors to frequently check this page
           for any changes to its Privacy Policy. Your continued use of this site
           after any change in this Privacy Policy will constitute your
