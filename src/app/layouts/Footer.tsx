@@ -11,15 +11,15 @@ const footerArr = [
     list: [
       {
         title: "Term & Conditions",
-        path: "/",
+        path: "/term",
       },
       {
         title: "Privacy Policy",
-        path: "/",
+        path: "/privacy",
       },
       {
         title: "Cancellation & Refund Policy",
-        path: "/",
+        path: "/cancelation",
       },
     ],
   },
@@ -90,16 +90,18 @@ const Footer = () => {
                 <ul className="flex flex-col ">
                   {curElm.list.map((curElm, index) => (
                     <li
-                      className="mt-4 flex w-fit cursor-pointer list-none items-center  common-transition hover:text-secondary"
+                      className="mt-4 flex w-fit cursor-pointer list-none items-center common-transition hover:text-primary hover:underline"
                       key={index}
                     >
-                      <div className="flex items-center">
-                        <ChevronRight />
+                      <Link href={curElm?.path}>
+                        <div className="flex items-center">
+                          <ChevronRight />
 
-                        <p className=" tracking-wide text-sm font-medium ">
-                          {curElm.title}
-                        </p>
-                      </div>
+                          <p className=" tracking-wide text-sm font-medium ">
+                            {curElm.title}
+                          </p>
+                        </div>
+                      </Link>
                     </li>
                   ))}
                 </ul>
