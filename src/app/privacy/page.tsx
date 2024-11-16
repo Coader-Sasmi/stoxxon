@@ -3,7 +3,7 @@ import PublicLayout from "../layouts";
 export default function Page() {
   return (
     <PublicLayout>
-      <div className="main-container py-5 flex flex-col gap-3 bg-purple-900/5">
+      <div className="main-container py-10 flex flex-col gap-3 bg-purple-900/5">
         <h1 className="">GENERAL PRIVACY</h1>
         <p className="text-gray-500 text-sm tracking-wider font-thin">
           Like most Websites Stoxxon Research Services collects

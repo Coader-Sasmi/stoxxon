@@ -3,7 +3,7 @@ import PublicLayout from "../layouts";
 export default function Page() {
   return (
     <PublicLayout>
-      <div className="main-container py-5 flex flex-col gap-3 bg-purple-900/5">
+      <div className="main-container py-10 flex flex-col gap-3 bg-purple-900/5">
         <h1>Who We Are</h1>
         <p className="text-gray-500 text-sm tracking-wider font-thin">
           Our website address is: https://stoxxon.vercel.app/.
