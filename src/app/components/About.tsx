@@ -1,56 +1,57 @@
 "use client";
 import {
   Diversity2Outlined,
-  Groups2Outlined,
   ImportantDevicesOutlined,
-  InventoryOutlined,
+  PeopleAltOutlined,
+  TrendingUp,
 } from "@mui/icons-material";
 
 const aboutUs_Arr = [
   {
     _id: "1",
     icon: (
-      <Groups2Outlined className="!text-secondary !text-5xl !bg-white !p-1 !rounded-md !shadow-lg" />
+      <TrendingUp className="!text-primary !text-5xl !bg-white !p-1 !rounded-md !shadow-lg" />
     ),
     count: "120+",
-    title: "Research",
+    title: "Research Hour",
     description:
-      "Customer satisfaction is a term frequently used in marketing.",
+      "Dedicated time analyzing stock trends, data, and market opportunities.",
   },
   {
     _id: "2",
     icon: (
-      <InventoryOutlined className="!text-secondary !text-5xl !bg-white !p-1 !rounded-md !shadow-lg" />
+      <PeopleAltOutlined className="!text-primary !text-5xl !bg-white !p-1 !rounded-md !shadow-lg" />
     ),
-    count: "150+",
-    title: "Profits",
-    description: "Project managers can derail the success of a project. ",
+    count: "10+",
+    title: "Happy Clients",
+    description:
+      "Empowering investors with reliable insights for consistent stock market success.",
   },
   {
     _id: "3",
     icon: (
-      <Diversity2Outlined className="!text-secondary !text-5xl !bg-white !p-1 !rounded-md !shadow-lg" />
+      <Diversity2Outlined className="!text-primary !text-5xl !bg-white !p-1 !rounded-md !shadow-lg" />
     ),
-    count: "120+",
+    count: "5+",
     title: "Team Members",
-    description: "A team member is an employee who works in a group or team.",
+    description:
+      "Passionate analysts delivering insights for profitable stock market decisions.",
   },
   {
     _id: "4",
     icon: (
-      <ImportantDevicesOutlined className="!text-secondary !text-5xl !bg-white !p-1 !rounded-md !shadow-lg" />
+      <ImportantDevicesOutlined className="!text-primary !text-5xl !bg-white !p-1 !rounded-md !shadow-lg" />
     ),
-    count: "06",
+    count: "07+",
     title: "Years Experience",
-    description:
-      "Experience refers to conscious events specifically to perceptions.",
+    description: "7 years of experience in stock market analysis and trading.",
   },
 ];
 
-const About = () => {
+export default function About() {
   return (
     <section
-      className="main-container  md:py-16 py-8 w-full scroll-mt-12"
+      className="main-container md:py-16 py-8 w-full scroll-mt-12"
       id="about"
     >
       <div className="flex flex-col md:gap-10 gap-5 justify-center items-center w-full">
@@ -64,13 +65,13 @@ const About = () => {
           guide your investment decisions.
         </p>
 
-        <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-5 grid-cols-2 place-items-center mt-5 w-full">
+        <div className=" grid lg:grid-cols-4 md:grid-cols-3 gap-5 grid-cols-2 place-items-center mt-5 w-full">
           {aboutUs_Arr.map((item) => (
             <div
               key={item._id}
-              className="flex flex-col md:gap-4 gap-2 md:h-64 lg:h-72 justify-center items-center border common-transition cursor-default hover:shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] p-5 rounded-md text-center bg-primary/10"
+              className="relative flex flex-col md:gap-4 gap-2 md:h-52 justify-center items-center border common-transition cursor-default hover:shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] p-5 rounded-md text-center bg-purple-700/5"
             >
-              <p>{item.icon}</p>
+              <p className="absolute -translate-y-28">{item.icon}</p>
 
               <h5 className="md:text-3xl text-xl font-semibold">
                 {item.count}
@@ -79,7 +80,7 @@ const About = () => {
                 <h6 className="md:font-medium text-sm md:text-lg">
                   {item.title}
                 </h6>
-                <p className="text-gray-800 text-sm md:block hidden">
+                <p className="text-gray-400 text-sm md:block hidden">
                   {item.description}
                 </p>
               </div>
@@ -89,6 +90,4 @@ const About = () => {
       </div>
     </section>
   );
-};
-
-export default About;
+}
