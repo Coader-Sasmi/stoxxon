@@ -5,103 +5,99 @@ import { Divider } from "@mui/material";
 const solution_Arr = [
   {
     _id: "1",
-    heading: "CRM Software",
+    heading: "Equity Cash",
     description:
-      "Store unlimited contacts and build stronger relationships by keeping track of all your customer details in one place",
+      "Equity cash services facilitate seamless trading, settlement, and management of cash equity transactions for investors.",
     subheading: "POPULAR FEATURES",
-    icon: "./home/crm_solutions.png",
     list: [
       {
-        subtitle: "Contact Management",
+        subtitle: "Real-time Market Data",
       },
       {
-        subtitle: "Deal Management",
+        subtitle: "Advanced Charting Tools",
       },
       {
-        subtitle: "Sales Automation",
+        subtitle: "Seamless Order Execution",
       },
       {
-        subtitle: "Appointment Scheduling",
+        subtitle: "Comprehensive Risk Management",
       },
     ],
     started: "Get started",
   },
   {
     _id: "2",
-    heading: "Marketing Automation",
+    heading: "Options",
     description:
-      "Save time by automating your marketing processes and sending personalized messages to target audiences",
-    icon: "./home/marketing_automation_solutions.png",
+      "Options trading services provide tools, strategies, and insights for buying or selling options to maximize profits.",
     subheading: "POPULAR FEATURES",
     list: [
       {
-        subtitle: "Forms & Landing Pages",
+        subtitle: "Real-time Market Data",
       },
       {
-        subtitle: "Email Sequences",
+        subtitle: "Advanced Charting Tools",
       },
       {
-        subtitle: "Marketing Automation",
+        subtitle: "Seamless Order Execution",
       },
       {
-        subtitle: "Email Template Builder",
+        subtitle: "Comprehensive Risk Management",
       },
     ],
     started: "Get started",
   },
   {
     _id: "3",
-    heading: "Process Management",
+    heading: "Equity Future",
     description:
-      "Store unlimited contacts and build stronger relationships by keeping track of all your customer details in one place",
-    icon: "./home/process_management_icon.png",
+      "Equity future services provide contracts to trade stocks at predetermined prices on future dates.",
     subheading: "POPULAR FEATURES",
     list: [
       {
-        subtitle: "Sales Process Builder",
+        subtitle: "Real-time Market Data",
       },
       {
-        subtitle: "Processing Rules",
+        subtitle: "Advanced Charting Tools",
       },
       {
-        subtitle: "Review Process",
+        subtitle: "Seamless Order Execution",
       },
       {
-        subtitle: "Approval Process",
+        subtitle: "Comprehensive Risk Management",
       },
     ],
     started: "Get started",
   },
   {
     _id: "4",
-    heading: "Performance Management",
+    heading: "Commodity MCX",
     description:
-      "Store unlimited contacts and build stronger relationships by keeping track of all your customer details in one place",
-    icon: "./home/performance_management_icon.png",
+      "Commodity MCX services offer trading, analysis, and support for commodities like gold, silver, and crude oil.",
     subheading: "POPULAR FEATURES",
     list: [
       {
-        subtitle: "Forecasting",
+        subtitle: "Real-time Market Data",
       },
       {
-        subtitle: "Territory Management",
+        subtitle: "Advanced Charting Tools",
       },
       {
-        subtitle: "Analytics",
+        subtitle: "Seamless Order Execution",
       },
       {
-        subtitle: "Visitor Tracking",
+        subtitle: "Comprehensive Risk Management",
       },
     ],
     started: "Get started",
   },
 ];
-const Solution = () => {
+export default function TopServices() {
   return (
     <section className="main-container md:py-20 py-8 scroll-mt-4" id="solution">
       <div className="flex flex-col md:gap-10 gap-5 justify-center items-center w-full">
         <h1 className="md:text-4xl text-3xl tracking-tighter font-semibold">
-          Single Solu<span className="text-secondary">tion</span>
+          Popular Ser<span className="text-secondary">vices</span>
         </h1>
         <p className="  md:tracking-wider tracking-tight text-center md:text-base text-xs">
           Identify new opportunities, convert visitors, deliver customer
@@ -116,11 +112,11 @@ const Solution = () => {
           >
             <div className="flex md:flex-row flex-col-reverse items-center md:gap-2 gap-5">
               <span className="md:w-5/6 w-full">
-                <h5 className="font-medium text-lg pb-5">{item.heading}</h5>
+                <h5 className="font-semibold text-lg pb-5">{item.heading}</h5>
                 <p className="text-sm text-gray-700">{item.description}</p>
               </span>
               <span className="md:w-1/6 w-full">
-                <img src={item.icon} alt="icon" className="h-20 w-20" />
+                <img src="./sharemarket.png" alt="icon" className="h-20 w-20" />
               </span>
             </div>
             <Divider />
@@ -129,7 +125,7 @@ const Solution = () => {
               <h6 className="grid lg:grid-cols-2 grid-cols-1 gap-2">
                 {item.list.map((innerItem, index) => (
                   <div key={index} className="flex gap-1 items-center">
-                    <CheckCircleOutline className="text-primary text-lg" />
+                    <CheckCircleOutline className="text-secondary text-lg" />
                     <p className="">{innerItem.subtitle}</p>
                   </div>
                 ))}
@@ -145,6 +141,4 @@ const Solution = () => {
       </div>
     </section>
   );
-};
-
-export default Solution;
+}

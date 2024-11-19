@@ -53,7 +53,7 @@ export default function Navbar() {
           </Link>
           <Link href="/">
             <h6 className="transition-color duration-150 ease-in-out hover:text-secondary">
-              Payment Options
+              Pricing
             </h6>
           </Link>
         </aside>

@@ -37,45 +37,15 @@ export default function ResponsiveNav() {
           </Link>
           <Link href="/">
             <h6 className="hover:text-secondary common-transition text-sm">
-              Payment Options
-            </h6>
-          </Link>
-          {/* <Link href="/#counter">
-            <h6 className="hover:text-secondary common-transition text-sm">
-              Counter
-            </h6>
-          </Link> */}
-          {/* <Link href="/#pricing">
-            <h6 className="hover:text-secondary common-transition text-sm">
               Pricing
             </h6>
-          </Link> */}
-          {/* <Link href="/#testimonial">
-            <h6 className="hover:text-secondary common-transition text-sm">
-              Testimonial
-            </h6>
-          </Link> */}
-          {/* <Link href="/#contact">
-            <h6 className="hover:text-secondary common-transition text-sm">
-              Contact Us
-            </h6>
-          </Link> */}
-          {/* <Link href="/#contact" target=" ">
-            <h6 className="hover:text-secondary common-transition text-sm">
-              Mobile App
-            </h6>
-          </Link> */}
+          </Link>
           <div className="flex flex-col gap-4 mb-4 ">
             <Link href="/">
               <button className="w-24 text-secondary font-semibold rounded-md common-transition text-start hover:text-center hover:bg-primary/10 hover:px-5 hover:py-1">
                 Contact Us
               </button>
             </Link>
-            {/* <Link href="/register">
-              <button className="w-24 border-2 px-4  common-transition font-semibold py-1 rounded-md text-sm text-primary  border-primary hover:bg-primary hover:text-white">
-                Sign Up
-              </button>
-            </Link> */}
           </div>
         </section>
       </Collapse>
