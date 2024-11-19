@@ -41,17 +41,17 @@ export default function Navbar() {
               Home
             </h6>
           </Link>
-          <Link href="/">
+          <Link href="/#about">
             <h6 className="transition-color duration-150 ease-in-out hover:text-secondary">
               About
             </h6>
           </Link>
-          <Link href="/">
+          <Link href="/#services">
             <h6 className="transition-color duration-150 ease-in-out hover:text-secondary">
               Services
             </h6>
           </Link>
-          <Link href="/">
+          <Link href="/#pricing">
             <h6 className="transition-color duration-150 ease-in-out hover:text-secondary">
               Pricing
             </h6>
@@ -59,7 +59,7 @@ export default function Navbar() {
         </aside>
         <aside className="flex w-1/4 items-center justify-end gap-1 ">
           <div>
-            <Link href="/">
+            <Link href="/#contact">
               <h6 className="border-2 border-primary px-4 hover:bg-primary hover:text-white common-transition font-semibold py-1 rounded-md">
                 Contact Us
               </h6>

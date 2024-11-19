@@ -1,8 +1,15 @@
 "use client";
 
-import { Call, ChevronRight, MailOutline } from "@mui/icons-material";
+import {
+  Call,
+  ChevronRight,
+  MailOutline,
+  Pause,
+  PlayArrow,
+} from "@mui/icons-material";
 import { Divider } from "@mui/material";
 import Link from "next/link";
+import { useRef, useState } from "react";
 
 const footerArr = [
   {
@@ -56,6 +63,20 @@ const footerArr = [
 ];
 
 const Footer = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlayPause = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
   return (
     <section className=" shadow">
       <section className="main-container py-10  md:px-10">
@@ -108,6 +129,29 @@ const Footer = () => {
               </div>
             </div>
           ))}
+
+          <div className="relative w-full h-full">
+            <video
+              ref={videoRef}
+              loop
+              muted
+              className="w-full h-full object-cover rounded-xl"
+              aria-label="Background video showcasing stock trading"
+            >
+              <source src="/increase_stock.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <button
+              onClick={handlePlayPause}
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black text-white p-1 rounded-full"
+            >
+              {isPlaying ? (
+                <Pause className="!text-3xl" />
+              ) : (
+                <PlayArrow className="!text-3xl" />
+              )}
+            </button>
+          </div>
         </div>
       </section>
       <Divider />

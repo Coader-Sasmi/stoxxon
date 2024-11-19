@@ -31,7 +31,7 @@ const pricing_Arr = [
 
 export default function PricingSection() {
   return (
-    <section className="main-container  md:py-20 py-8 bg-gray-100" id="pricing">
+    <section className="main-container md:py-24 py-8 bg-gray-100" id="pricing">
       <div className="flex flex-col md:gap-10 gap-5 justify-center items-center w-full">
         <h1 className="md:text-4xl text-3xl tracking-tighter font-semibold">
           Our Pric<span className="text-secondary">ing</span>
