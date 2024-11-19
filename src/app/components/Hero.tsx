@@ -15,8 +15,8 @@ export default function Hero() {
         Your browser does not support the video tag.
       </video>
 
-      <div className="relative z-10 flex flex-col gap-7 md:gap-10 justify-center items-center md:py-24 py-8 text-center main-container">
-        <h1 className="font-semibold md:font-medium lg:text-[4rem] md:text-5xl text-3xl text-white drop-shadow-md">
+      <div className="relative z-10 flex flex-col gap-7 md:gap-10 justify-center items-center lg:py-24 py-28 text-center main-container">
+        <h1 className="font-semibold md:font-medium lg:text-[4rem] md:text-5xl text-4xl text-white drop-shadow-md">
           Trade Smarter. Analyze Deeper.
           <br />
           Profit Faster.

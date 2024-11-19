@@ -115,7 +115,7 @@ export default function TopServices() {
                 <h5 className="font-semibold text-lg pb-5">{item.heading}</h5>
                 <p className="text-sm text-gray-700">{item.description}</p>
               </span>
-              <span className="md:w-1/6 w-full">
+              <span className="md:w-1/6 w-full hidden md:block">
                 <img src="./sharemarket.png" alt="icon" className="h-20 w-20" />
               </span>
             </div>

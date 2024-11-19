@@ -65,13 +65,15 @@ export default function About() {
           guide your investment decisions.
         </p>
 
-        <div className=" grid lg:grid-cols-4 md:grid-cols-3 gap-5 grid-cols-2 place-items-center mt-5 w-full">
+        <div className=" grid lg:grid-cols-4 gap-5 grid-cols-2 place-items-center mt-5 w-full">
           {aboutUs_Arr.map((item) => (
             <div
               key={item._id}
-              className="relative flex flex-col md:gap-4 gap-2 md:h-52 justify-center items-center border common-transition cursor-default hover:shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] p-5 rounded-md text-center bg-purple-700/5"
+              className="relative flex flex-col md:gap-4 gap-2 md:h-52 h-32 justify-center items-center border common-transition cursor-default hover:shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] p-5 rounded-md text-center bg-purple-700/5"
             >
-              <p className="absolute -translate-y-28">{item.icon}</p>
+              <p className="absolute md:-translate-y-28 -translate-y-16">
+                {item.icon}
+              </p>
 
               <h5 className="md:text-3xl text-xl font-semibold">
                 {item.count}
