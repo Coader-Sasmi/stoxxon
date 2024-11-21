@@ -10,14 +10,14 @@ type Props = {
 };
 export default function PublicLayout({
   children = <></>,
-  title = "Welcome To YardCRM",
+  title = "Stoxxon Research Services",
   description,
   ogImage,
 }: Props) {
   return (
     <>
       <Head>
-        <meta property="og:url" content="https://yardcrm.vercel.app/" />
+        <meta property="og:url" content="https://stoxxon.vercel.app/" />
         <meta property="og:type" content="website" />
         <title>{title}</title>
         <meta name="description" content={description} />

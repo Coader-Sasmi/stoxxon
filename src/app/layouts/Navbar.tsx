@@ -1,5 +1,6 @@
 "use client";
 
+import { ChevronRight } from "@mui/icons-material";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import ResponsiveNav from "./ResponsiveNav";
@@ -25,7 +26,11 @@ export default function Navbar() {
         color ? "shadow-sm" : ""
       }`}
     >
-      <section className="main-container hidden items-center justify-between pt-2 lg:flex">
+      <p className="text-primary text-center w-full md:text-sm text-xs md:tracking-wider tracking-tighter py-3 border-b-2 border-secondary">
+        Investing in the stock market involves risk. Please read all related
+        documents carefully before making any investment.
+      </p>
+      <section className="main-container hidden items-center justify-between pt-2 lg:flex ">
         <aside className="w-1/4">
           <Link href="/">
             <img
@@ -37,36 +42,38 @@ export default function Navbar() {
         </aside>
         <aside className="w-1/2 flex justify-center gap-4 md:gap-6 tracking-wider font-semibold">
           <Link href="/">
-            <h6 className="transition-color duration-150 ease-in-out hover:text-secondary">
+            <h6 className="transition-color duration-150 ease-in-out hover:text-primary">
               Home
             </h6>
           </Link>
           <Link href="/#about">
-            <h6 className="transition-color duration-150 ease-in-out hover:text-secondary">
+            <h6 className="transition-color duration-150 ease-in-out hover:text-primary">
               About
             </h6>
           </Link>
-          <Link href="/#services">
-            <div className="group relative ">
-              <h6 className="transition-color duration-150 ease-in-out hover:text-secondary">
+          <div className="group relative duration-150 ease-in-out">
+            <Link href="/#services">
+              <h6 className="transition-color duration-150 ease-in-out hover:text-primary">
                 Services
               </h6>
-              <div className="absolute bg-white hidden group-hover:block px-5 py-2 rounded-md border">
-                <Link href="/derivatives">
-                  <h6 className="transition-color duration-150 ease-in-out hover:text-secondary py-2">
-                    Derivatives
-                  </h6>
-                </Link>
-                <Link href="/equity">
-                  <h6 className="transition-color duration-150 ease-in-out hover:text-secondary">
-                    Equity
-                  </h6>
-                </Link>
-              </div>
+            </Link>
+            <div className="absolute bg-white hidden group-hover:block px-5 rounded-md border">
+              <Link href="/equity">
+                <h6 className="transition-color duration-150 ease-in-out hover:text-secondary py-3 flex items-center">
+                  <ChevronRight />
+                  <span>Equity</span>
+                </h6>
+              </Link>
+              <Link href="/derivatives">
+                <h6 className="transition-color duration-150 ease-in-out hover:text-secondary pb-3 flex items-center">
+                  <ChevronRight />
+                  <span>Derivatives</span>
+                </h6>
+              </Link>
             </div>
-          </Link>
+          </div>
           <Link href="/#pricing">
-            <h6 className="transition-color duration-150 ease-in-out hover:text-secondary">
+            <h6 className="transition-color duration-150 ease-in-out hover:text-primary">
               Pricing
             </h6>
           </Link>
