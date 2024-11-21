@@ -27,7 +27,7 @@ const solution_Arr = [
   },
   {
     _id: "2",
-    heading: "Equity Options",
+    heading: "Stock Options",
     description:
       "Options trading services provide tools, strategies, and insights for buying or selling options to maximize profits.",
     subheading: "POPULAR FEATURES",
@@ -47,31 +47,10 @@ const solution_Arr = [
     ],
     started: "Get started",
   },
-  // {
-  //   _id: "3",
-  //   heading: "Equity Future",
-  //   description:
-  //     "Equity future services provide contracts to trade stocks at predetermined prices on future dates.",
-  //   subheading: "POPULAR FEATURES",
-  //   list: [
-  //     {
-  //       subtitle: "Real-time Market Data",
-  //     },
-  //     {
-  //       subtitle: "Comprehensive Risk Management",
-  //     },
-  //     {
-  //       subtitle: "Type:Intraday | SMS/day:1-2",
-  //     },
-  //     {
-  //       subtitle: "STARTS FROM 10,000",
-  //     },
-  //   ],
-  //   started: "Get started",
-  // },
+
   {
-    _id: "4",
-    heading: "Commodity MCX",
+    _id: "3",
+    heading: "Index Options",
     description:
       "Commodity MCX services offer trading, analysis, and support for commodities like gold, silver, and crude oil.",
     subheading: "POPULAR FEATURES",
@@ -91,28 +70,6 @@ const solution_Arr = [
     ],
     started: "Get started",
   },
-  // {
-  //   _id: "5",
-  //   heading: "Long Term Exclusive Service",
-  //   description:
-  //     "Commodity MCX services offer trading, analysis, and support for commodities like gold, silver, and crude oil.",
-  //   subheading: "POPULAR FEATURES",
-  //   list: [
-  //     {
-  //       subtitle: "Real-time Market Data",
-  //     },
-  //     {
-  //       subtitle: "Comprehensive Risk Management",
-  //     },
-  //     {
-  //       subtitle: "Type:Positional",
-  //     },
-  //     {
-  //       subtitle: "STARTS FROM 1,00,000",
-  //     },
-  //   ],
-  //   started: "Get started",
-  // },
 ];
 export default function TopServices() {
   return (

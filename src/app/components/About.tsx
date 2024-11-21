@@ -1,16 +1,17 @@
 "use client";
+
 import {
-  Diversity2Outlined,
   ImportantDevicesOutlined,
   PeopleAltOutlined,
   TrendingUp,
 } from "@mui/icons-material";
+import ReadM from "./ReadM";
 
 const aboutUs_Arr = [
   {
     _id: "1",
     icon: (
-      <TrendingUp className="!text-primary !text-5xl !bg-white !p-1 !rounded-md !shadow-lg" />
+      <TrendingUp className="!text-white bg-[#9aafc2] !text-6xl !p-2 !rounded-full" />
     ),
     count: "1512+",
     title: "Research Hour",
@@ -20,9 +21,9 @@ const aboutUs_Arr = [
   {
     _id: "2",
     icon: (
-      <PeopleAltOutlined className="!text-primary !text-5xl !bg-white !p-1 !rounded-md !shadow-lg" />
+      <PeopleAltOutlined className="!text-white bg-[#9aafc2] !text-6xl !p-2 !rounded-full" />
     ),
-    count: "167+",
+    count: "103+",
     title: "Happy Clients",
     description:
       "Empowering investors with reliable insights for consistent stock market success.",
@@ -30,17 +31,7 @@ const aboutUs_Arr = [
   {
     _id: "3",
     icon: (
-      <Diversity2Outlined className="!text-primary !text-5xl !bg-white !p-1 !rounded-md !shadow-lg" />
-    ),
-    count: "15+",
-    title: "Team Members",
-    description:
-      "Passionate analysts delivering insights for profitable stock market decisions.",
-  },
-  {
-    _id: "4",
-    icon: (
-      <ImportantDevicesOutlined className="!text-primary !text-5xl !bg-white !p-1 !rounded-md !shadow-lg" />
+      <ImportantDevicesOutlined className="!text-white bg-[#9aafc2] !text-6xl !p-2 !rounded-full" />
     ),
     count: "06+",
     title: "Years Experience",
@@ -50,22 +41,56 @@ const aboutUs_Arr = [
 
 export default function About() {
   return (
-    <section
-      className="main-container md:py-16 py-8 w-full scroll-mt-12"
+    <aside
+      className="main-container md:py-24 py-12 w-full scroll-mt-12 lg:px-48"
       id="about"
     >
-      <div className="flex flex-col md:gap-10 gap-5 justify-center items-center w-full">
+      <section className="flex md:flex-row flex-col items-center gap-5 mb-20">
+        <h1 className="md:text-4xl text-3xl tracking-tighter font-semibold lg:w-[35rem] md:w-full">
+          About <span className="text-secondary">Us</span>
+        </h1>
+        <div className="w-1 h-16 bg-gray-300 hidden lg:block"></div>
+        <p className="text-gray-600 tracking-wider hidden md:block">
+          At Stoxxon, we offer expert research and investment guidance to help
+          you maximize returns. Intraday trading can deliver significant
+          profits, but it comes with higher risk. For those preferring lower
+          risk, stock options or swing trading may be more suitable. Our team
+          leverages advanced analytics to tailor strategies that balance risk
+          and growth, ensuring you make informed decisions to optimize your
+          portfolio.
+        </p>
+        <ReadM />
+      </section>
+
+      <div className=" flex md:flex-row flex-col gap-5 mt-5 w-full bg-[#9aafc2] p-6 ">
+        {aboutUs_Arr.map((item) => (
+          <div
+            key={item._id}
+            className="relative flex flex-col md:gap-4 gap-2 md:h-52 justify-center items-center border common-transition cursor-default shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] p-5 rounded-sm text-center bg-white"
+          >
+            {/* <div className="w-[20rem] h-[10rem] border-t-2 border-dashed border-gray-500 rounded-t-full mx-auto"></div> */}
+
+            <p className="absolute md:-translate-y-[7rem] -translate-y-16 hidden md:block">
+              {item.icon}
+            </p>
+
+            <h5 className="md:text-3xl text-xl font-semibold">{item.count}</h5>
+            <div className="flex flex-col gap-2">
+              <h6 className="md:font-medium text-sm md:text-lg">
+                {item.title}
+              </h6>
+              <p className="text-gray-400 text-sm">{item.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* <div className="flex flex-col md:gap-10 gap-5 justify-center items-center w-full">
         <h1 className="md:text-4xl text-3xl tracking-tighter font-semibold">
           About <span className="text-secondary">Us</span>
         </h1>
-        <p className=" md:tracking-wider tracking-tight text-center md:text-base text-xs">
-          Navigate market ups and downs with confidence. Discover how our expert
-          insights can
-          <br />
-          guide your investment decisions.
-        </p>
-
-        <div className=" grid lg:grid-cols-4 gap-5 grid-cols-2 place-items-center mt-5 w-full">
+        <ReadM />
+        <div className=" flex gap-5 mt-5 w-full">
           {aboutUs_Arr.map((item) => (
             <div
               key={item._id}
@@ -89,7 +114,7 @@ export default function About() {
             </div>
           ))}
         </div>
-      </div>
-    </section>
+      </div> */}
+    </aside>
   );
 }
