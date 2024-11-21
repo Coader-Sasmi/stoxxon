@@ -47,9 +47,23 @@ export default function Navbar() {
             </h6>
           </Link>
           <Link href="/#services">
-            <h6 className="transition-color duration-150 ease-in-out hover:text-secondary">
-              Services
-            </h6>
+            <div className="group relative ">
+              <h6 className="transition-color duration-150 ease-in-out hover:text-secondary">
+                Services
+              </h6>
+              <div className="absolute bg-white hidden group-hover:block px-5 py-2 rounded-md border">
+                <Link href="/derivatives">
+                  <h6 className="transition-color duration-150 ease-in-out hover:text-secondary py-2">
+                    Derivatives
+                  </h6>
+                </Link>
+                <Link href="/equity">
+                  <h6 className="transition-color duration-150 ease-in-out hover:text-secondary">
+                    Equity
+                  </h6>
+                </Link>
+              </div>
+            </div>
           </Link>
           <Link href="/#pricing">
             <h6 className="transition-color duration-150 ease-in-out hover:text-secondary">
