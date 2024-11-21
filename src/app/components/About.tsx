@@ -12,7 +12,7 @@ const aboutUs_Arr = [
     icon: (
       <TrendingUp className="!text-primary !text-5xl !bg-white !p-1 !rounded-md !shadow-lg" />
     ),
-    count: "120+",
+    count: "1512+",
     title: "Research Hour",
     description:
       "Dedicated time analyzing stock trends, data, and market opportunities.",
@@ -22,7 +22,7 @@ const aboutUs_Arr = [
     icon: (
       <PeopleAltOutlined className="!text-primary !text-5xl !bg-white !p-1 !rounded-md !shadow-lg" />
     ),
-    count: "10+",
+    count: "167+",
     title: "Happy Clients",
     description:
       "Empowering investors with reliable insights for consistent stock market success.",
@@ -32,7 +32,7 @@ const aboutUs_Arr = [
     icon: (
       <Diversity2Outlined className="!text-primary !text-5xl !bg-white !p-1 !rounded-md !shadow-lg" />
     ),
-    count: "5+",
+    count: "15+",
     title: "Team Members",
     description:
       "Passionate analysts delivering insights for profitable stock market decisions.",
@@ -42,9 +42,9 @@ const aboutUs_Arr = [
     icon: (
       <ImportantDevicesOutlined className="!text-primary !text-5xl !bg-white !p-1 !rounded-md !shadow-lg" />
     ),
-    count: "07+",
+    count: "06+",
     title: "Years Experience",
-    description: "7 years of experience in stock market analysis and trading.",
+    description: "6 years of experience in stock market analysis and trading.",
   },
 ];
 
