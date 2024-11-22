@@ -1,8 +1,9 @@
 "use client";
 
 import {
-  ImportantDevicesOutlined,
   PeopleAltOutlined,
+  Percent,
+  QueryStats,
   TrendingUp,
 } from "@mui/icons-material";
 import ReadM from "./ReadM";
@@ -11,7 +12,7 @@ const aboutUs_Arr = [
   {
     _id: "1",
     icon: (
-      <TrendingUp className="!text-white bg-[#9aafc2] !text-6xl !p-2 !rounded-full" />
+      <QueryStats className="!text-white bg-[#9aafc2] !text-6xl !p-1 !rounded-full" />
     ),
     count: "1512+",
     title: "Research Hour",
@@ -21,7 +22,7 @@ const aboutUs_Arr = [
   {
     _id: "2",
     icon: (
-      <PeopleAltOutlined className="!text-white bg-[#9aafc2] !text-6xl !p-2 !rounded-full" />
+      <PeopleAltOutlined className="!text-white bg-[#9aafc2] !text-6xl !p-1 !rounded-full" />
     ),
     count: "103+",
     title: "Happy Clients",
@@ -31,7 +32,16 @@ const aboutUs_Arr = [
   {
     _id: "3",
     icon: (
-      <ImportantDevicesOutlined className="!text-white bg-[#9aafc2] !text-6xl !p-2 !rounded-full" />
+      <Percent className="!text-white bg-[#9aafc2] !text-6xl !p-1 !rounded-full" />
+    ),
+    count: "77%",
+    title: "Expected Accuracy Percentage",
+    description: "The stock market's expected accuracy depends.",
+  },
+  {
+    _id: "4",
+    icon: (
+      <TrendingUp className="!text-white bg-[#9aafc2] !text-6xl !p-1 !rounded-full" />
     ),
     count: "06+",
     title: "Years Experience",
@@ -62,15 +72,15 @@ export default function About() {
         <ReadM />
       </section>
 
-      <div className=" flex md:flex-row flex-col gap-5 mt-5 w-full bg-[#9aafc2] p-6 ">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 mt-5 w-full bg-[#9aafc2] p-6 ">
         {aboutUs_Arr.map((item) => (
           <div
             key={item._id}
-            className="relative flex flex-col md:gap-4 gap-2 md:h-52 justify-center items-center border common-transition cursor-default shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] p-5 rounded-sm text-center bg-white"
+            className="relative flex flex-col md:gap-4 gap-2 md:h-60 justify-center items-center border common-transition cursor-default shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] p-5 rounded-sm text-center bg-white"
           >
             {/* <div className="w-[20rem] h-[10rem] border-t-2 border-dashed border-gray-500 rounded-t-full mx-auto"></div> */}
 
-            <p className="absolute md:-translate-y-[7rem] -translate-y-16 hidden md:block">
+            <p className="absolute md:-translate-y-[7.7rem] -translate-y-16 hidden md:block">
               {item.icon}
             </p>
 
@@ -84,37 +94,6 @@ export default function About() {
           </div>
         ))}
       </div>
-
-      {/* <div className="flex flex-col md:gap-10 gap-5 justify-center items-center w-full">
-        <h1 className="md:text-4xl text-3xl tracking-tighter font-semibold">
-          About <span className="text-secondary">Us</span>
-        </h1>
-        <ReadM />
-        <div className=" flex gap-5 mt-5 w-full">
-          {aboutUs_Arr.map((item) => (
-            <div
-              key={item._id}
-              className="relative flex flex-col md:gap-4 gap-2 md:h-52 h-32 justify-center items-center border common-transition cursor-default hover:shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] p-5 rounded-md text-center bg-purple-700/5"
-            >
-              <p className="absolute md:-translate-y-28 -translate-y-16">
-                {item.icon}
-              </p>
-
-              <h5 className="md:text-3xl text-xl font-semibold">
-                {item.count}
-              </h5>
-              <div className="flex flex-col gap-2">
-                <h6 className="md:font-medium text-sm md:text-lg">
-                  {item.title}
-                </h6>
-                <p className="text-gray-400 text-sm md:block hidden">
-                  {item.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div> */}
     </aside>
   );
 }
