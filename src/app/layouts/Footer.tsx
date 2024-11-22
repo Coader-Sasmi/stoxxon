@@ -38,10 +38,6 @@ const footerArr = [
         title: "Stock Cash",
         path: "/",
       },
-      // {
-      //   title: "Stock Futures",
-      //   path: "/",
-      // },
       {
         title: "Stock Options",
         path: "/",
@@ -50,14 +46,6 @@ const footerArr = [
         title: "Index Options",
         path: "/",
       },
-      // {
-      //   title: "BTST/STBT Pack",
-      //   path: "/",
-      // },
-      // {
-      //   title: "Delivery Pack",
-      //   path: "/",
-      // },
     ],
   },
 ];
