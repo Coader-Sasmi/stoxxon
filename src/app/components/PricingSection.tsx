@@ -1,41 +1,74 @@
 "use client";
+
+import { useState } from "react";
+
 const pricing_Arr = [
   {
     _id: "1",
     heading: "Basic",
     monthlyPrice: "11,800",
+    yearlyPrice: "9000",
     monthlyPath: "for 1 month",
+    yearlyPath: "for 1 month",
     button: "BUY NOW",
-    description:
-      "Streamline and elevate your trading journey with data-driven insights and smart automation.",
+    description: "Automate and optimize your sales cycle",
   },
   {
     _id: "2",
     heading: "Premium",
     monthlyPrice: "23,600",
+    yearlyPrice: "21,000",
     monthlyPath: "for 1 month",
+    yearlyPath: "for 3 months",
     button: "BUY NOW",
-    description:
-      "Optimize investment strategies and drive financial growth with precision.",
+    description: "Improve customer acquisition and accelerate growth",
   },
   {
     _id: "3",
     heading: "Modified",
     monthlyPrice: "41,772",
+    yearlyPrice: "33,000",
     monthlyPath: "for 1 month",
+    yearlyPath: "for 6 months",
     button: "BUY NOW",
-    description:
-      "Navigate global markets seamlessly with our comprehensive stock trading and analysis platform.",
+    description: "Manage global CX operations with the complete CRM",
   },
 ];
-
 export default function PricingSection() {
+  const [pricing, setPricing] = useState("equity");
+  const handleChange = (type: string) => {
+    setPricing(type);
+  };
   return (
-    <section className="main-container md:py-24 py-8 bg-gray-100" id="pricing">
+    <section className="main-container md:py-36 py-16 bg-gray-100" id="pricing">
       <div className="flex flex-col md:gap-10 gap-5 justify-center items-center w-full">
         <h1 className="md:text-4xl text-3xl tracking-tighter font-semibold">
           Our Pric<span className="text-secondary">ing</span>
         </h1>
+        <div className=" bg-purple-200 px-3 py-2 font-semibold shadow-2xl rounded-full ">
+          <span className="flex gap-2 items-center cursor-pointer">
+            <p
+              onClick={() => handleChange("equity")}
+              className={`${
+                pricing === "equity"
+                  ? "bg-black text-white py-1 px-3 text-sm rounded-full "
+                  : ""
+              }`}
+            >
+              Equity
+            </p>
+            <p
+              onClick={() => handleChange("Derivatives")}
+              className={`${
+                pricing === "Derivatives"
+                  ? "bg-black text-white py-1 px-3 text-sm rounded-full  "
+                  : ""
+              }`}
+            >
+              Derivatives
+            </p>
+          </span>
+        </div>
       </div>
       <div className="grid md:grid-cols-12 grid-cols-3 gap-5 w-full md:pt-16 pt-5 lg:px-40 ">
         {pricing_Arr.map((item, index) => (
@@ -60,9 +93,11 @@ export default function PricingSection() {
             <h5 className="lg:text-2xl text-xl font-medium">{item.heading}</h5>
             <h3 className="lg:text-5xl text-3xl">
               <span className="md:text-2xl text-lg text-gray-700">₹</span>
-              {item.monthlyPrice}
+              {pricing === "equity" ? item.yearlyPrice : item.monthlyPrice}
             </h3>
-            <p className="text-sm">{item.monthlyPath}</p>
+            <p className="text-sm">
+              {pricing === "equity" ? item.yearlyPath : item.monthlyPath}
+            </p>
             <h6
               className={` text-white text-sm lg:px-10 px-8 py-2 lg:py-3 common-transition cursor-pointer rounded-md font-medium lg:font-semibold ${
                 item._id === "3"
