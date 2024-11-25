@@ -24,7 +24,16 @@ const ContactUs = () => {
         </div>
 
         <div className="w-full hidden md:block ">
-          <img src="./Animation.gif" alt="contact_gif" className=" w-[90%]" />
+          <video
+            autoPlay
+            loop
+            muted
+            className=" w-full h-full object-cover opacity-90"
+            aria-label="Background video showcasing stock trading"
+          >
+            <source src="/support.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </section>

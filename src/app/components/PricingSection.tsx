@@ -11,7 +11,7 @@ const pricing_Arr = [
     monthlyPath: "for 1 month",
     yearlyPath: "for 1 month",
     button: "BUY NOW",
-    description: "Automate and optimize your sales cycle",
+    description: "Essential tools for beginners to start trading confidently.",
   },
   {
     _id: "2",
@@ -21,7 +21,7 @@ const pricing_Arr = [
     monthlyPath: "for 1 month",
     yearlyPath: "for 3 months",
     button: "BUY NOW",
-    description: "Improve customer acquisition and accelerate growth",
+    description: "Unlock advanced insights with our Premium Stock Plan.",
   },
   {
     _id: "3",
@@ -31,7 +31,7 @@ const pricing_Arr = [
     monthlyPath: "for 1 month",
     yearlyPath: "for 6 months",
     button: "BUY NOW",
-    description: "Manage global CX operations with the complete CRM",
+    description: "Adapted strategy ensures better returns in stock market.",
   },
 ];
 export default function PricingSection() {
