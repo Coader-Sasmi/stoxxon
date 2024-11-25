@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable @next/next/no-img-element */
 
 import { Close, Menu } from "@mui/icons-material";
 import { Collapse } from "@mui/material";

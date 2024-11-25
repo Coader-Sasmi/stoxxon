@@ -1,8 +1,7 @@
 "use client";
+/* eslint-disable @next/next/no-img-element */
 
 import ContactForm from "./ContactForm";
-
-/* eslint-disable @next/next/no-img-element */
 
 const ContactUs = () => {
   return (

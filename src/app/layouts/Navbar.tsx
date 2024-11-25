@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable @next/next/no-img-element */
 
 import { ChevronRight } from "@mui/icons-material";
 import Link from "next/link";

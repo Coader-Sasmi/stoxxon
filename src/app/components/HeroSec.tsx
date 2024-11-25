@@ -1,3 +1,6 @@
+"use client";
+/* eslint-disable @next/next/no-img-element */
+
 export default function HeroSec({ title }: { title: string }) {
   return (
     <div

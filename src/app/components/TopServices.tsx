@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable @next/next/no-img-element */
 import { CheckCircleOutline } from "@mui/icons-material";
 import { Divider } from "@mui/material";
 import Link from "next/link";

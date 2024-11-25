@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable @next/next/no-img-element */
 import { Done } from "@mui/icons-material";
 
 export default function Hero() {

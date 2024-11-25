@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
