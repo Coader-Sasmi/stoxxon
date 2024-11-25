@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 const pricing_Arr = [
@@ -98,15 +99,18 @@ export default function PricingSection() {
             <p className="text-sm">
               {pricing === "equity" ? item.yearlyPath : item.monthlyPath}
             </p>
-            <h6
-              className={` text-white text-sm lg:px-10 px-8 py-2 lg:py-3 common-transition cursor-pointer rounded-md font-medium lg:font-semibold ${
-                item._id === "3"
-                  ? "bg-secondary"
-                  : "bg-primary hover:bg-secondary"
-              }`}
-            >
-              {item.button}
-            </h6>
+            <Link href={`${pricing === "equity" ? "/equity" : "/derivatives"}`}>
+              <button
+                className={` text-white text-sm lg:px-10 px-8 py-2 lg:py-3 common-transition cursor-pointer rounded-md font-medium lg:font-semibold ${
+                  item._id === "3"
+                    ? "bg-secondary"
+                    : "bg-primary hover:bg-secondary"
+                }`}
+              >
+                {item.button}
+              </button>
+            </Link>
+
             <p className="text-center h-16 pt-2 md:hidden lg:block block text-gray-500">
               {item.description}
             </p>
