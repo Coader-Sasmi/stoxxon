@@ -75,7 +75,10 @@ const solution_Arr = [
 ];
 export default function TopServices() {
   return (
-    <section className="main-container md:py-20 py-8 scroll-mt-4" id="services">
+    <section
+      className="main-container md:py-20 py-28 scroll-mt-4"
+      id="services"
+    >
       <div className="flex flex-col md:gap-10 gap-5 justify-center items-center w-full">
         <h1 className="md:text-4xl text-3xl tracking-tighter font-semibold">
           Ser<span className="text-secondary">vices</span>

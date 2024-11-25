@@ -1,13 +1,14 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
 
-import { Close, Menu } from "@mui/icons-material";
+import { ChevronRight, Close, Menu } from "@mui/icons-material";
 import { Collapse } from "@mui/material";
 import Link from "next/link";
 import { useState } from "react";
 
 export default function ResponsiveNav() {
   const [open, setOpen] = useState(false);
+  const [serviceMore, setServiceMore] = useState(false);
   return (
     <section className="main-container block lg:hidden py-1 relative z-[9000] ">
       <div className="flex justify-between items-center">
@@ -25,17 +26,35 @@ export default function ResponsiveNav() {
       </div>
 
       <Collapse in={open} timeout="auto" unmountOnExit>
-        <section className="flex flex-col gap-2  absolute bg-white w-full p-5 left-0 ">
+        <section className="flex flex-col gap-2 absolute bg-white w-full p-5 left-0 border-b shadow-sm ">
           <Link href="/#about">
             <h6 className="hover:text-secondary common-transition text-sm">
               About
             </h6>
           </Link>
           <Link href="/#services">
-            <h6 className="common-transition text-sm hover:text-secondary">
+            <h6
+              className="common-transition text-sm hover:text-secondary"
+              onClick={() => setServiceMore(!serviceMore)}
+            >
               Services
             </h6>
           </Link>
+
+          <div className={`${serviceMore ? "hidden" : "block pl-2"}`}>
+            <Link href="/equity">
+              <h6 className="transition-color text-sm duration-150 ease-in-out hover:text-secondary py-2 flex items-center">
+                <ChevronRight />
+                <span>Equity</span>
+              </h6>
+            </Link>
+            <Link href="/derivatives">
+              <h6 className="transition-color text-sm duration-150 ease-in-out hover:text-secondary pb-3 flex items-center">
+                <ChevronRight />
+                <span>Derivatives</span>
+              </h6>
+            </Link>
+          </div>
           <Link href="/#pricing">
             <h6 className="hover:text-secondary common-transition text-sm">
               Pricing
@@ -43,7 +62,7 @@ export default function ResponsiveNav() {
           </Link>
           <div className="flex flex-col gap-4 mb-4 ">
             <Link href="/#contact">
-              <button className="w-24 text-secondary font-semibold rounded-md common-transition text-start hover:text-center hover:bg-primary/10 hover:px-5 hover:py-1">
+              <button className="rounded-md common-transition text-start hover:text-center hover:bg-primary/10 hover:px-5 hover:py-1">
                 Contact Us
               </button>
             </Link>

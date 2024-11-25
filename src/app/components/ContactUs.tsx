@@ -6,7 +6,7 @@ import ContactForm from "./ContactForm";
 const ContactUs = () => {
   return (
     <section
-      className="main-container md:py-16 py-8 bg-purple-100 scroll-mt-16"
+      className="main-container md:py-16 py-12 bg-purple-100 scroll-mt-16"
       id="contact"
     >
       <div className="flex md:flex-row flex-col items-center bg-white md:gap-10 gap-5 w-full">

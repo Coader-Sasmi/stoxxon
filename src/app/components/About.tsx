@@ -53,7 +53,7 @@ const aboutUs_Arr = [
 export default function About() {
   return (
     <aside
-      className="main-container md:py-24 py-12 w-full scroll-mt-12 lg:px-48"
+      className="main-container md:py-24 py-20 w-full scroll-mt-12 lg:px-48"
       id="about"
     >
       <section className="flex md:flex-row flex-col items-center gap-5 mb-20">
