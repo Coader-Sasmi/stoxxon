@@ -4,7 +4,7 @@ import {
   Hero,
   PricingSection,
   TopServices,
-} from "./components";
+} from "@/components";
 import PublicLayout from "./layouts";
 
 export default function Home() {

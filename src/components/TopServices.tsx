@@ -9,7 +9,7 @@ const solution_Arr = [
     _id: "1",
     heading: "Equity Cash",
     description:
-      "Equity cash services facilitate seamless trading, settlement, and management of cash equity transactions for investors.",
+      "Customers will receive recommendations via Fundamental analysis.This service is for those customers that have a Low Risk Appetite.",
     subheading: "POPULAR FEATURES",
     list: [
       {
@@ -31,7 +31,7 @@ const solution_Arr = [
     _id: "2",
     heading: "Stock Options",
     description:
-      "Options trading services provide tools, strategies, and insights for buying or selling options to maximize profits.",
+      "Customers will receive recommendations via Technical & Fundamental analysis.This service is for those customers that have a moderate Risk Appetite.",
     subheading: "POPULAR FEATURES",
     list: [
       {
@@ -54,7 +54,7 @@ const solution_Arr = [
     _id: "3",
     heading: "Index Options",
     description:
-      "Commodity MCX services offer trading, analysis, and support for commodities like gold, silver, and crude oil.",
+      "Customers will receive recommendations via Technical analysis.This service is for those customers that have a High Risk Appetite.",
     subheading: "POPULAR FEATURES",
     list: [
       {
@@ -97,11 +97,7 @@ export default function TopServices() {
             <div className="flex md:flex-row flex-col-reverse items-center md:gap-2 gap-5">
               <span className="md:w-5/6 w-full">
                 <h5 className="font-semibold text-lg pb-5">{item.heading}</h5>
-                <p className="text-sm text-gray-500">
-                  Customers will receive recommendations via technical
-                  analysis.This service is for those customers that have a High
-                  Risk Appetite.
-                </p>
+                <p className="text-sm text-gray-500">{item?.description}</p>
               </span>
               <span className="md:w-1/6 w-full hidden md:block">
                 <img src="./sharemarket.png" alt="icon" className="h-20 w-20" />

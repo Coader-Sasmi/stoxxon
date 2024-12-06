@@ -1,7 +1,7 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
+import { HeroSec } from "@/components";
 import { ArrowRight } from "@mui/icons-material";
-import { HeroSec } from "../components";
 import PublicLayout from "../layouts";
 
 export default function Page() {
