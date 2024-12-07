@@ -1,10 +1,8 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
 import { HeroSec } from "@/components";
-import {
-  ArrowCircleRightOutlined,
-  CurrencyRupeeOutlined,
-} from "@mui/icons-material";
+import { FiArrowRightCircle } from "react-icons/fi";
+import { TbCurrencyRupee } from "react-icons/tb";
 import PublicLayout from "../layouts";
 
 export default function Page() {
@@ -53,8 +51,8 @@ export default function Page() {
             <div className="flex flex-col gap-3">
               {service_Arr?.map((curElm) => (
                 <div key={curElm?._id}>
-                  <p className="text-gray-600 flex items-start gap-3">
-                    <ArrowCircleRightOutlined className="text-primary" />
+                  <p className="text-gray-600 flex items-center gap-3">
+                    <FiArrowRightCircle className="text-primary text-xl" />
                     {curElm?.service}
                   </p>
                 </div>
@@ -74,8 +72,8 @@ export default function Page() {
               <div className="flex items-center gap-5 p-5">
                 <img src="./stock.png" className="md:w-20 w-12" />
                 <div className="flex flex-col gap-2 ">
-                  <p className="text-xl font-semibold">
-                    <CurrencyRupeeOutlined />
+                  <p className="text-xl font-semibold flex items-center">
+                    <TbCurrencyRupee />
                     <span>{curElm?.price} + 18% GST</span>
                   </p>
                   <p className="text-center text-gray-500">

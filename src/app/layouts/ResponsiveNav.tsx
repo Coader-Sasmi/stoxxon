@@ -1,32 +1,34 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
 
-import { ChevronRight, Close, Menu } from "@mui/icons-material";
-import { Collapse } from "@mui/material";
 import Link from "next/link";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
+import { FaAngleRight } from "react-icons/fa";
+import { RxCross2 } from "react-icons/rx";
+import { CustomDrawer } from "../core";
 
-export default function ResponsiveNav() {
-  const [open, setOpen] = useState(false);
+type ResponsiveProps = {
+  openDrawer: boolean;
+  setOpenDrawer: Dispatch<SetStateAction<boolean>>;
+};
+
+export default function ResponsiveNav({
+  openDrawer,
+  setOpenDrawer,
+}: ResponsiveProps) {
   const [serviceMore, setServiceMore] = useState(false);
   return (
-    <section className="main-container block lg:hidden py-1 relative z-[9000] ">
-      <div className="flex justify-between items-center">
-        <Link href="/" className="">
-          <img src="logo.png" alt="logo" className="md:w-[20%] w-[30%]" />
-        </Link>
-
-        <span className="" onClick={() => setOpen(!open)}>
-          {open ? (
-            <Close className="text-secondary text-3xl" />
-          ) : (
-            <Menu className="text-secondary text-3xl" />
-          )}
-        </span>
-      </div>
-
-      <Collapse in={open} timeout="auto" unmountOnExit>
-        <section className="flex flex-col gap-2 absolute bg-white w-full p-5 left-0 border-b shadow-sm ">
+    <CustomDrawer
+      open={openDrawer}
+      onClose={() => setOpenDrawer(false)}
+      anchor="right"
+      drawerStyle="w-[60vw] md:w-[50vw] h-screen "
+    >
+      <section className="p-5">
+        <div className="flex justify-end items-end text-2xl">
+          <RxCross2 onClick={() => setOpenDrawer(false)} />
+        </div>
+        <section className="flex flex-col gap-2 w-full">
           <Link href="/#about">
             <h6 className="hover:text-secondary common-transition text-sm">
               About
@@ -44,13 +46,13 @@ export default function ResponsiveNav() {
           <div className={`${serviceMore ? "hidden" : "block pl-2"}`}>
             <Link href="/equity">
               <h6 className="transition-color text-sm duration-150 ease-in-out hover:text-secondary py-2 flex items-center">
-                <ChevronRight />
+                <FaAngleRight />
                 <span>Equity</span>
               </h6>
             </Link>
             <Link href="/derivatives">
               <h6 className="transition-color text-sm duration-150 ease-in-out hover:text-secondary pb-3 flex items-center">
-                <ChevronRight />
+                <FaAngleRight />
                 <span>Derivatives</span>
               </h6>
             </Link>
@@ -68,7 +70,7 @@ export default function ResponsiveNav() {
             </Link>
           </div>
         </section>
-      </Collapse>
-    </section>
+      </section>
+    </CustomDrawer>
   );
 }

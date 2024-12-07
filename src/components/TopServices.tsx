@@ -26,7 +26,7 @@ const solution_Arr = [
       },
     ],
     started: "Get started",
-    path:"/equity"
+    path: "/equity",
   },
   {
     _id: "2",
@@ -49,7 +49,7 @@ const solution_Arr = [
       },
     ],
     started: "Get started",
-     path:"/derivatives"
+    path: "/derivatives",
   },
 
   {
@@ -73,13 +73,13 @@ const solution_Arr = [
       },
     ],
     started: "Get started",
-     path:"/derivatives"
+    path: "/derivatives",
   },
 ];
 export default function TopServices() {
   return (
     <section
-      className="main-container md:py-20 py-28 scroll-mt-4"
+      className="main-container md:py-20 py-28 scroll-mt-14"
       id="services"
     >
       <div className="flex flex-col md:gap-10 gap-5 justify-center items-center w-full">

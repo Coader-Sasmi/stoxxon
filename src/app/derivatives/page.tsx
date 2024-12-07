@@ -1,7 +1,7 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
 import { HeroSec } from "@/components";
-import { ArrowRight } from "@mui/icons-material";
+import { FaCaretRight } from "react-icons/fa";
 import PublicLayout from "../layouts";
 
 export default function Page() {
@@ -140,7 +140,7 @@ export default function Page() {
               <div className="lg:h-48 flex flex-col gap-1 pt-2 text-gray-500">
                 {item.description?.map((newElm, i: number) => (
                   <p key={i} className="flex gap-1 ">
-                    <ArrowRight className="text-2xl text-gray-950" />
+                    <FaCaretRight className="text-2xl text-gray-950" />
                     <span>{newElm?.title}</span>
                   </p>
                 ))}

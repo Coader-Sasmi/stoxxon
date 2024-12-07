@@ -1,16 +1,12 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
 
-import {
-  Call,
-  ChevronRight,
-  MailOutline,
-  Pause,
-  PlayArrow,
-} from "@mui/icons-material";
-import { Divider } from "@mui/material";
 import Link from "next/link";
 import { useRef, useState } from "react";
+import { BsPauseFill } from "react-icons/bs";
+import { FaAngleRight, FaPlay } from "react-icons/fa";
+import { LuMail } from "react-icons/lu";
+import { MdPhoneInTalk } from "react-icons/md";
 
 const footerArr = [
   {
@@ -51,7 +47,7 @@ const footerArr = [
   },
 ];
 
-const Footer = () => {
+export default function Footer() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -79,14 +75,14 @@ const Footer = () => {
                 href="mailto:stoxxon5@gmail.com"
                 className="flex items-center gap-1"
               >
-                <MailOutline className="!text-secondary !text-xl" />
+                <LuMail className="!text-secondary !text-xl" />
                 Email :<p> stoxxon5@gmail.com</p>
               </Link>
               <Link
                 href="tel:+919632445616"
                 className="flex items-center gap-1"
               >
-                <Call className="!text-secondary !text-xl" />
+                <MdPhoneInTalk className="!text-secondary !text-xl" />
                 Phone :<p>+91 9632445616</p>
               </Link>
             </div>
@@ -105,7 +101,7 @@ const Footer = () => {
                     >
                       <Link href={curElm?.path}>
                         <div className="flex items-center">
-                          <ChevronRight />
+                          <FaAngleRight className="text-xl" />
 
                           <p className=" tracking-wide text-sm font-medium ">
                             {curElm.title}
@@ -132,18 +128,17 @@ const Footer = () => {
             </video>
             <button
               onClick={handlePlayPause}
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black text-white p-1 rounded-full"
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black text-white p-3 rounded-full"
             >
               {isPlaying ? (
-                <Pause className="!text-3xl" />
+                <BsPauseFill className="!text-xl" />
               ) : (
-                <PlayArrow className="!text-3xl" />
+                <FaPlay className="!text-xl" />
               )}
             </button>
           </div>
         </div>
       </section>
-      <Divider />
       <section className="bg-primary">
         <div className="main-container flex  py-4 justify-center items-center text-white tracking-wide">
           <p>
@@ -154,6 +149,4 @@ const Footer = () => {
       </section>
     </section>
   );
-};
-
-export default Footer;
+}
