@@ -26,6 +26,7 @@ const solution_Arr = [
       },
     ],
     started: "Get started",
+    path:"/equity"
   },
   {
     _id: "2",
@@ -48,6 +49,7 @@ const solution_Arr = [
       },
     ],
     started: "Get started",
+     path:"/derivatives"
   },
 
   {
@@ -71,6 +73,7 @@ const solution_Arr = [
       },
     ],
     started: "Get started",
+     path:"/derivatives"
   },
 ];
 export default function TopServices() {
@@ -115,7 +118,7 @@ export default function TopServices() {
                 ))}
               </h6>
             </span>
-            <Link href="/derivatives">
+            <Link href={item?.path}>
               <button className="btn-primary capitalize text-white bg-primary h-9 w-32 rounded-md">
                 {item.started}
               </button>
